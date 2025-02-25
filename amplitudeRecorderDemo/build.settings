@@ -1,0 +1,41 @@
+--
+-- For more information on build.settings see the Corona Build Guide at:
+-- http://docs.coronalabs.com/guide/distribution/buildSettings/index.html
+--
+
+settings =
+{
+	--[[
+	orientation =
+	{
+		default = "portrait",
+		supported = { "portrait" }
+	},
+	--]]
+
+	iphone =
+	{
+		xcassets = "Images.xcassets",
+		plist =
+		{
+			NSMicrophoneUsageDescription = "testing",
+			UILaunchStoryboardName = "LaunchScreen",
+		},
+	},
+	android =
+  {
+				minSdkVersion = "16",
+        usesPermissions =
+      	{
+        	"android.permission.INTERNET",
+          		"android.permission.RECORD_AUDIO",
+      	},
+  },
+	plugins =
+	 {
+		 ["plugin.amplitudeRecorder"] = {
+				 publisherId = "tech.scotth",
+				 marketplaceId = "insert marketplace account ID",
+			 },
+		}
+}
